@@ -14,7 +14,7 @@ server.use(express.json());
 
 server.use("/api/user", userRouter);
 server.use("/api/tasks", jwtAuth, taskRouter);
-server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 server.listen(3200, () => {
   console.log("task management system is running on port 3200");
   connectUsingMongoose();
